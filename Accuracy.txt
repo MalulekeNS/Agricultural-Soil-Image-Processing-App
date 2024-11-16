@@ -1,0 +1,6 @@
+Soil Analysis and Crop Recommendation using Machine Learning.
+
+Algorithm / Model Used: MobileNetV2 Architecture.
+
+Training accuracy of 97.34%. and
+Validation accuracy of 99.21%.
