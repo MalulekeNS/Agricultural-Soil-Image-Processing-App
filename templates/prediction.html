@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Soil Types</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="../static/css/prediction.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="../static/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="../static/images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="../static/css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+      <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="header_main">
+            <div class="container-fluid">
+               <div class="menu_main">
+                  <ul>
+                     <li><a href="{{ url_for('first') }}">Home</a></li>
+                     <li><a href="{{ url_for('login') }}">Login</a></li>
+                     <li><a href="{{ url_for('index') }}">Preview</a></li>
+                     <li class="active"><a href="{{ url_for('performance') }}">Performance Analysis</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <h1 class="banner_taital">Prediction</h1>
+                        <p class="banner_text">Soil Analysis and Crop Recommendation</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+
+      <!-- client section start -->
+      <div class="client_section layout_padding">
+         <div class="container">
+            <h1 class="client_taital">Prediction</h1>
+            <center>
+               <div class="col-md-50 col-lg-10" style="margin-left:-150px">
+                  <div class="content">
+                     <div class="col-lg-12">
+                        {% if prediction %}
+                        <br>
+                        <div style="margin-left:250px">
+                           <img src="{{ img_path }}" height="300px" width="300px">
+                        </div>
+                        <br><br>
+                        <h2>Soil Type Prediction: <i>{{ prediction.soil_type }}</i></h2>
+                        <h2>pH Value Prediction: <i>{{ prediction.ph_value }}</i></h2>
+                        {% endif %}
+                     </div>
+                  </div>
+               </div>
+            </center>
+         </div>
+      </div>
+      <!-- client section end -->
+
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container"></div>
+      </div>
+      <!-- footer section end -->
+
+      <!-- Javascript files-->
+      <script src="../static/js/jquery.min.js"></script>
+      <script src="../static/js/popper.min.js"></script>
+      <script src="../static/js/bootstrap.bundle.min.js"></script>
+      <script src="../static/js/jquery-3.0.0.min.js"></script>
+      <script src="../static/js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="../static/js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="../static/js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+   </body>
+</html>
